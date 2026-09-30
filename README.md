@@ -30,8 +30,9 @@ I picked the campus_life corpus, which contains short posts answering questions 
 
 ## Chunking Strategy
 
-**Chunk size:**
-**Overlap:**
+**Chunk size:** One whole document (178–549 characters in this corpus)
+**Overlap:** 0
+
 
 <!-- What about YOUR documents made you pick these numbers? Short posts and
      long sectioned guides don't want the same chunking, and "800 seemed
@@ -42,7 +43,8 @@ I picked the campus_life corpus, which contains short posts answering questions 
      more than pretending you got it right first time.
 
      Milestone 3. -->
-I split every document into one chunk because it was already made sense as such.
+I kept each document as one chunk because the campus_life documents are already short and focus on one topic. Splitting them further could separate useful facts from their context.
+
 ## Sample Chunks
 
 <!-- Five chunks, pasted as text. Label each one and name the file it came from
@@ -54,9 +56,6 @@ I split every document into one chunk because it was already made sense as such.
 
      Milestone 3. -->
 
-Paste these into your README under Sample Chunks. The rubric asks
-for the source file and the function that produced them — both are
-printed for you below.
 
 ======================================================================
 Chunk 1  |  source: admin_add_drop_deadline.txt#0  |  produced by: chunker.py::split_documents
@@ -114,14 +113,17 @@ Laundry costs $1.75 wash, $1.75 dry, app-based. On noise: moderate; the building
 <!-- One complete question and answer, pasted as text, with the source line
      visible. Milestone 4. -->
 
-**Question:**
+**Question:** How far in advance should you book your adviser before registration?
 
 **Answer:**
 
-```
-```
+You should book your adviser two weeks out.
 
-**My relevance cutoff:**
+Source: `advising_registration.txt`
+
+**My relevance cutoff:** 0.6
+
+My five in-corpus questions had best distances from 0.242 to 0.459, while the five out-of-corpus questions ranged from 0.825 to 0.934. I kept the cutoff at 0.6 because it sits comfortably between those two groups.
 
 <!-- The number you set in config.py, and how you got there.
 
@@ -132,9 +134,19 @@ Laundry costs $1.75 wash, $1.75 dry, app-based. On noise: moderate; the building
 
      Milestone 4. -->
 
+
 | Question | In corpus? | Best distance |
 |---|---|---|
-|  |  |  |
+| When is the library open until during term? | Yes | 0.459 |
+| How far in advance should you book your adviser before registration? | Yes | 0.332 |
+| What is the workload for CS 340 early in the course? | Yes | 0.261 |
+| Which part of Innisfree Hall is quieter? | Yes | 0.292 |
+| How many times can you change your meal plan tier? | Yes | 0.242 |
+| What is the capital of Mongolia? | No | 0.825 |
+| How do I change the oil in a diesel engine? | No | 0.934 |
+| Who won the 1994 World Cup? | No | 0.886 |
+| What is the recommended dosage of ibuprofen for a headache? | No | 0.844 |
+| How do I write a for loop in Rust? | No | 0.896 |
 
 ## How I Used AI
 
@@ -148,7 +160,7 @@ Laundry costs $1.75 wash, $1.75 dry, app-based. On noise: moderate; the building
      Milestone 5. -->
 
 **1.**
-
+I asked AI to help me through the process and teach me how to do everything step by step so i did ever step manually with guidence from AI. 
 **2.**
 
 <!-- ── Stretch features ─────────────────────────────────────────────────────
