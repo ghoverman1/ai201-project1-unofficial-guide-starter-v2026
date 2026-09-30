@@ -25,7 +25,8 @@
      questions your system answers. Write it for someone who has never seen
      this repo.
 
-     Milestone 5. -->
+     Milestone 5. --> 
+I picked the campus_life corpus, which contains short posts answering questions about school and campus life. It currently has 88 chunks, with each document short enough to stay together as one chunk. The system embeds each chunk, meaning it represents the text as numbers, and stores those representations in a vector database. When someone asks a question, it embeds the query, retrieves the closest chunks by semantic distance, and sends the relevant context to an AI model to generate an answer.
 
 ## Chunking Strategy
 
