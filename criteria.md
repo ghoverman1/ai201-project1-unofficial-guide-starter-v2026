@@ -25,6 +25,7 @@ contains the answer.
 **Why this target:**
 <!-- e.g. "One of my questions is about a topic only two documents mention, so
      I expect that one to be hard." -->
+I chose 4 out of 5 because the questions are all answerable from the corpus, but semantic retrieval can still miss a relevant chunk if the wording differs. I want strong consistency without assuming retrieval will be perfect.
 
 ---
 
@@ -35,6 +36,8 @@ Every answer the system produces names at least one source document.
 **Why this target:**
 <!-- Why all five and not four? What about your setup makes that achievable —
      or what would have to go wrong for it not to be? -->
+I want every answer grounded in a source document so the model is less likely to hallucinate and so each response can be checked against the original text.
+
 
 ---
 
@@ -52,7 +55,7 @@ in at least 4 of 5 tries.
 **Why this target:**
 <!-- What did your distances look like when you set the cutoff in Milestone 4?
      Was there a clean gap, or did the two groups overlap? -->
-
+I chose 4 out of 5 to allow for some error in semantic search. The out-of-corpus questions test whether the relevance gate can recognize when the documents do not contain enough information, so the system refuses instead of generating an unsupported answer.
 ---
 
 ## 4. Something about your chunks
@@ -68,12 +71,10 @@ in at least 4 of 5 tries.
           sentence cut in half at either end."
        - "No chunk is shorter than 200 characters, since anything below that
           in my corpus turned out to be a heading with no content under it." -->
-
-
+4 out of 5 sampled chunks focus on one clear topic
 
 **Why this target:**
-
-
+To keep each chunk focused enough that semantic search can match questions to the right information without unrelated details muddying the result.
 
 ---
 
@@ -86,11 +87,11 @@ in at least 4 of 5 tries.
      handles badly, about source attribution being correct rather than merely
      present — anything, as long as it names a number or an observable
      outcome. -->
-
+For at least 4 of my 5 test questions, the retrieved chunk containing the answer also includes enough context to understand what the answer refers to.
 
 
 **Why this target:**
-
+I chose 4 out of 5 to allow for some error in retrieval or chunking while still requiring the system to provide enough context for most answers to make sense on their own. hitchhikers guide to the galixy eg 42. 
 
 
 ---
