@@ -201,38 +201,160 @@ I asked AI to help me reason through the chunking strategy. After looking at the
      runs — the actual text your system produced, not a description of it.
      Name the file and function that produced it. -->
 
-When is the library open until during term?
-  run 1: —  (best distance 0.459)
-  run 2: —  (best distance 0.459)
-  run 3: —  (best distance 0.459)
+## Real output
 
-How far in advance should you book your adviser before registration?
-  run 1: —  (best distance 0.332)
-  run 2: —  (best distance 0.332)
-  run 3: —  (best distance 0.332)
+This is what the system actually produced. Paste the relevant parts
+into your README underneath the table — the rubric asks for real
+output as text, not a description of it.
 
-What is the workload for CS 340 early in the course?
-  run 1: —  (best distance 0.261)
-  run 2: —  (best distance 0.261)
-  run 3: —  (best distance 0.261)
+### When is the library open until during term? — run 1
 
-Which part of Innisfree Hall is quieter?
-  run 1: —  (best distance 0.292)
-  run 2: —  (best distance 0.292)
-  run 3: —  (best distance 0.292)
+- Best distance: 0.4593 (passed the gate)
+- Sources retrieved: admin_library_holds.txt, admin_study_abroad.txt, housing_calder_annexe_noise.txt, housing_morrow_house_noise.txt, study_library_hours.txt
 
-How many times can you change your meal plan tier?
-  run 1: —  (best distance 0.242)
-  run 2: —  (best distance 0.242)
-  run 3: —  (best distance 0.242)
+```
+The library is open until 2am during term. 
 
-Out-of-scope questions (the gate should refuse these):
-  refused  (best distance 0.825)  What is the capital of Mongolia?
-  refused  (best distance 0.934)  How do I change the oil in a diesel engine?
-  refused  (best distance 0.886)  Who won the 1994 World Cup?
-  refused  (best distance 0.844)  What is the recommended dosage of ibuprofen for a headache?
-  refused  (best distance 0.896)  How do I write a for loop in Rust?
-  -> gate refused 5 of 5
+Sources: `housing_calder_annexe_noise.txt`, `study_library_hours.txt`, and `housing_morrow_house_noise.txt`
+```
+
+### When is the library open until during term? — run 2
+
+- Best distance: 0.4593 (passed the gate)
+- Sources retrieved: admin_library_holds.txt, admin_study_abroad.txt, housing_calder_annexe_noise.txt, housing_morrow_house_noise.txt, study_library_hours.txt
+
+```
+During term, the library is open until 2am (from `housing_calder_annexe_noise.txt`, `study_library_hours.txt`, and `housing_morrow_house_noise.txt`).
+```
+
+### When is the library open until during term? — run 3
+
+- Best distance: 0.4593 (passed the gate)
+- Sources retrieved: admin_library_holds.txt, admin_study_abroad.txt, housing_calder_annexe_noise.txt, housing_morrow_house_noise.txt, study_library_hours.txt
+
+```
+The library is open until 2am during term. 
+
+Sources: `housing_calder_annexe_noise.txt`, `study_library_hours.txt`, and `housing_morrow_house_noise.txt`
+```
+
+### How far in advance should you book your adviser before registration? — run 1
+
+- Best distance: 0.3317 (passed the gate)
+- Sources retrieved: admin_declaring_a_major.txt, admin_library_holds.txt, advising_registration.txt, course_engl_205.txt, health_center.txt
+
+```
+You should book your adviser two weeks out before registration opens (advising_registration.txt).
+```
+
+### How far in advance should you book your adviser before registration? — run 2
+
+- Best distance: 0.3317 (passed the gate)
+- Sources retrieved: admin_declaring_a_major.txt, admin_library_holds.txt, advising_registration.txt, course_engl_205.txt, health_center.txt
+
+```
+You should book your adviser two weeks out before registration opens (advising_registration.txt).
+```
+
+### How far in advance should you book your adviser before registration? — run 3
+
+- Best distance: 0.3317 (passed the gate)
+- Sources retrieved: admin_declaring_a_major.txt, admin_library_holds.txt, advising_registration.txt, course_engl_205.txt, health_center.txt
+
+```
+You should book your adviser two weeks out before registration opens (advising_registration.txt).
+```
+
+### What is the workload for CS 340 early in the course? — run 1
+
+- Best distance: 0.2610 (passed the gate)
+- Sources retrieved: course_cs_210_workload.txt, course_cs_340.txt, course_cs_340_exams.txt, course_cs_340_workload.txt, course_stat_150_workload.txt
+
+```
+The workload for CS 340 early in the course is 6 hours a week. 
+
+Sources: `course_cs_340_workload.txt` and `course_cs_340.txt`
+```
+
+### What is the workload for CS 340 early in the course? — run 2
+
+- Best distance: 0.2610 (passed the gate)
+- Sources retrieved: course_cs_210_workload.txt, course_cs_340.txt, course_cs_340_exams.txt, course_cs_340_workload.txt, course_stat_150_workload.txt
+
+```
+For CS 340, the workload early in the course is 6 hours a week (source: `course_cs_340_workload.txt` and `course_cs_340.txt`).
+```
+
+### What is the workload for CS 340 early in the course? — run 3
+
+- Best distance: 0.2610 (passed the gate)
+- Sources retrieved: course_cs_210_workload.txt, course_cs_340.txt, course_cs_340_exams.txt, course_cs_340_workload.txt, course_stat_150_workload.txt
+
+```
+The workload for CS 340 early in the course is 6 hours a week. 
+
+Sources: `course_cs_340_workload.txt` and `course_cs_340.txt`
+```
+
+### Which part of Innisfree Hall is quieter? — run 1
+
+- Best distance: 0.2925 (passed the gate)
+- Sources retrieved: housing_fenwick_court_noise.txt, housing_innisfree_hall.txt, housing_innisfree_hall_noise.txt, housing_old_brewhouse_noise.txt, housing_tamsin_court_noise.txt
+
+```
+The short wing of the L-shaped building is much quieter (housing_innisfree_hall.txt and housing_innisfree_hall_noise.txt).
+```
+
+### Which part of Innisfree Hall is quieter? — run 2
+
+- Best distance: 0.2925 (passed the gate)
+- Sources retrieved: housing_fenwick_court_noise.txt, housing_innisfree_hall.txt, housing_innisfree_hall_noise.txt, housing_old_brewhouse_noise.txt, housing_tamsin_court_noise.txt
+
+```
+The short wing of Innisfree Hall is much quieter. 
+
+Source: housing_innisfree_hall_noise.txt (also mentioned in housing_innisfree_hall.txt)
+```
+
+### Which part of Innisfree Hall is quieter? — run 3
+
+- Best distance: 0.2925 (passed the gate)
+- Sources retrieved: housing_fenwick_court_noise.txt, housing_innisfree_hall.txt, housing_innisfree_hall_noise.txt, housing_old_brewhouse_noise.txt, housing_tamsin_court_noise.txt
+
+```
+The short wing of Innisfree Hall is much quieter. 
+
+Source: housing_innisfree_hall_noise.txt (also mentioned in housing_innisfree_hall.txt)
+```
+
+### How many times can you change your meal plan tier? — run 1
+
+- Best distance: 0.2420 (passed the gate)
+- Sources retrieved: admin_meal_plan_changes.txt, dining_kestrel_commons.txt, dining_kestrel_commons_followup.txt, dining_pellew_dining_hall_followup.txt, dining_verrill_street_grill_followup.txt
+
+```
+You can change your meal plan tier once (admin_meal_plan_changes.txt).
+```
+
+### How many times can you change your meal plan tier? — run 2
+
+- Best distance: 0.2420 (passed the gate)
+- Sources retrieved: admin_meal_plan_changes.txt, dining_kestrel_commons.txt, dining_kestrel_commons_followup.txt, dining_pellew_dining_hall_followup.txt, dining_verrill_street_grill_followup.txt
+
+```
+You can change your meal plan tier once, within the first ten days of the semester (admin_meal_plan_changes.txt).
+```
+
+### How many times can you change your meal plan tier? — run 3
+
+- Best distance: 0.2420 (passed the gate)
+- Sources retrieved: admin_meal_plan_changes.txt, dining_kestrel_commons.txt, dining_kestrel_commons_followup.txt, dining_pellew_dining_hall_followup.txt, dining_verrill_street_grill_followup.txt
+
+```
+You can change your meal plan tier once (admin_meal_plan_changes.txt).
+```
+Evidence from results/run_2026-10-03_1741_before.md,
+produced by run_eval.py::main
 
 ## Verdicts
 
@@ -244,6 +366,8 @@ Out-of-scope questions (the gate should refuse these):
      The target has to hold, not show up occasionally.
 
      Milestone 2. -->
+
+Criterion 1 was MET because all five questions retrieved a chunk containing the answer in all three runs.
 
 | Criterion | Target | Run 1 | Run 2 | Run 3 | Verdict |
 |---|---|---|---|---|---|
@@ -296,6 +420,179 @@ No baseline criteria were missed, so there was no failed pipeline stage to diagn
 | 3. Gate stops out-of-corpus questions | 4 of 5 | 5/5 | 5/5 | 5/5 | MET |
 | 4. Sampled chunks focus on one clear topic | 4 of 5 | 5/5 | 5/5 | 5/5 | MET |
 | 5. Answer chunk includes enough context | 4 of 5 | 5/5 | 5/5 | 5/5 | MET |
+
+
+## Real output
+
+This is what the system actually produced. Paste the relevant parts
+into your README underneath the table — the rubric asks for real
+output as text, not a description of it.
+
+### When is the library open until during term? — run 1
+
+- Best distance: 0.4593 (passed the gate)
+- Sources retrieved: admin_library_holds.txt, housing_calder_annexe_noise.txt, study_library_hours.txt
+
+```
+The library is open until 2am during term. 
+
+Sources: housing_calder_annexe_noise.txt and study_library_hours.txt
+```
+
+### When is the library open until during term? — run 2
+
+- Best distance: 0.4593 (passed the gate)
+- Sources retrieved: admin_library_holds.txt, housing_calder_annexe_noise.txt, study_library_hours.txt
+
+```
+The library is open until 2am during term. 
+
+This information comes from the following files: `housing_calder_annexe_noise.txt` and `study_library_hours.txt`.
+```
+
+### When is the library open until during term? — run 3
+
+- Best distance: 0.4593 (passed the gate)
+- Sources retrieved: admin_library_holds.txt, housing_calder_annexe_noise.txt, study_library_hours.txt
+
+```
+During term, the library is open until 2am (Source: housing_calder_annexe_noise.txt and study_library_hours.txt).
+```
+
+### How far in advance should you book your adviser before registration? — run 1
+
+- Best distance: 0.3317 (passed the gate)
+- Sources retrieved: admin_declaring_a_major.txt, advising_registration.txt, course_engl_205.txt
+
+```
+You should book your adviser two weeks in advance. 
+
+Source: advising_registration.txt
+```
+
+### How far in advance should you book your adviser before registration? — run 2
+
+- Best distance: 0.3317 (passed the gate)
+- Sources retrieved: admin_declaring_a_major.txt, advising_registration.txt, course_engl_205.txt
+
+```
+You should book your adviser two weeks in advance. 
+
+Source: advising_registration.txt
+```
+
+### How far in advance should you book your adviser before registration? — run 3
+
+- Best distance: 0.3317 (passed the gate)
+- Sources retrieved: admin_declaring_a_major.txt, advising_registration.txt, course_engl_205.txt
+
+```
+You should book your adviser two weeks in advance. 
+
+Source: advising_registration.txt
+```
+
+### What is the workload for CS 340 early in the course? — run 1
+
+- Best distance: 0.2610 (passed the gate)
+- Sources retrieved: course_cs_210_workload.txt, course_cs_340_exams.txt, course_cs_340_workload.txt
+
+```
+The workload for CS 340 early in the course is 6 hours a week. 
+
+Source: `course_cs_340_workload.txt`
+```
+
+### What is the workload for CS 340 early in the course? — run 2
+
+- Best distance: 0.2610 (passed the gate)
+- Sources retrieved: course_cs_210_workload.txt, course_cs_340_exams.txt, course_cs_340_workload.txt
+
+```
+The workload for CS 340 early in the course is 6 hours a week. Additionally, the first month is heavier than the rest. 
+
+Source: course_cs_340_workload.txt
+```
+
+### What is the workload for CS 340 early in the course? — run 3
+
+- Best distance: 0.2610 (passed the gate)
+- Sources retrieved: course_cs_210_workload.txt, course_cs_340_exams.txt, course_cs_340_workload.txt
+
+```
+The workload for CS 340 early in the course is 6 hours a week. Additionally, the first month is heavier than the rest. 
+
+Source: course_cs_340_workload.txt
+```
+
+### Which part of Innisfree Hall is quieter? — run 1
+
+- Best distance: 0.2925 (passed the gate)
+- Sources retrieved: housing_innisfree_hall.txt, housing_innisfree_hall_noise.txt, housing_old_brewhouse_noise.txt
+
+```
+The short wing of Innisfree Hall is much quieter, as the building is L-shaped. 
+
+Source: `housing_innisfree_hall_noise.txt` (also mentioned in `housing_innisfree_hall.txt`).
+```
+
+### Which part of Innisfree Hall is quieter? — run 2
+
+- Best distance: 0.2925 (passed the gate)
+- Sources retrieved: housing_innisfree_hall.txt, housing_innisfree_hall_noise.txt, housing_old_brewhouse_noise.txt
+
+```
+The short wing of Innisfree Hall is much quieter. 
+
+Source: `housing_innisfree_hall_noise.txt` (also mentioned in `housing_innisfree_hall.txt`).
+```
+
+### Which part of Innisfree Hall is quieter? — run 3
+
+- Best distance: 0.2925 (passed the gate)
+- Sources retrieved: housing_innisfree_hall.txt, housing_innisfree_hall_noise.txt, housing_old_brewhouse_noise.txt
+
+```
+Based on the documents, the short wing of Innisfree Hall is much quieter. 
+
+Files used: 
+- `housing_innisfree_hall_noise.txt` 
+- `housing_innisfree_hall.txt`
+```
+
+### How many times can you change your meal plan tier? — run 1
+
+- Best distance: 0.2420 (passed the gate)
+- Sources retrieved: admin_meal_plan_changes.txt, dining_kestrel_commons.txt, dining_kestrel_commons_followup.txt
+
+```
+You can change your meal plan tier once. 
+
+Source: admin_meal_plan_changes.txt
+```
+
+### How many times can you change your meal plan tier? — run 2
+
+- Best distance: 0.2420 (passed the gate)
+- Sources retrieved: admin_meal_plan_changes.txt, dining_kestrel_commons.txt, dining_kestrel_commons_followup.txt
+
+```
+You can change your meal plan tier once. 
+
+Source: admin_meal_plan_changes.txt
+```
+
+### How many times can you change your meal plan tier? — run 3
+
+- Best distance: 0.2420 (passed the gate)
+- Sources retrieved: admin_meal_plan_changes.txt, dining_kestrel_commons.txt, dining_kestrel_commons_followup.txt
+
+```
+You can change your meal plan tier once. 
+
+Source: admin_meal_plan_changes.txt
+```
+
 
 **Did it help?**
 
