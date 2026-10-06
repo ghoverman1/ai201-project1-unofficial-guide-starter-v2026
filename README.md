@@ -160,9 +160,10 @@ My five in-corpus questions had best distances from 0.242 to 0.459, while the fi
      Milestone 5. -->
 
 **1.**
-I asked AI to help me through the process and teach me how to do everything step by step so i did ever step manually with guidence from AI. 
-**2.**
+I asked AI to help me interpret the relevance distances from my five in-corpus and five out-of-corpus questions. It helped me compare the two groups and understand the tradeoff in setting the threshold. My in-corpus distances ranged from 0.242 to 0.459 and my out-of-corpus distances ranged from 0.825 to 0.934, so I decided to keep the cutoff at 0.6.
 
+**2.**
+I asked AI to help me reason through the chunking strategy. After looking at the corpus and the document lengths, I decided the documents were short enough to keep one chunk per document. I then wrote the chunking Python myself. When I got an error from a typo in `chunks` and the `Chunk` type, AI helped me identify it, I fixed it, and re-ran the index to verify the chunker worked.
 <!-- ── Stretch features ─────────────────────────────────────────────────────
      Doing one? Say so here BEFORE you start. A feature this README never
      claims earns nothing.
@@ -190,15 +191,48 @@ I asked AI to help me through the process and teach me how to do everything step
 
 | Criterion | Target | Run 1 | Run 2 | Run 3 | Verdict |
 |---|---|---|---|---|---|
-| 1. Retrieved chunk contains the answer | 4 of 5 |  |  |  |  |
-| 2. Every answer names a source | 5 of 5 |  |  |  |  |
-| 3. Gate stops out-of-corpus questions | 4 of 5 |  |  |  |  |
-| 4. | | | | | |
-| 5. | | | | | |
+| 1. Retrieved chunks include the answer | 4 of 5 | 5/5 | 5/5 | 5/5 | MET |
+| 2. Every answer names a source | 5 of 5 | 5/5 | 5/5 | 5/5 | MET |
+| 3. Gate stops out-of-corpus questions | 4 of 5 | 5/5 | 5/5 | 5/5 | MET |
+| 4. Sampled chunks focus on one clear topic | 4 of 5 | 5/5 | 5/5 | 5/5 | MET |
+| 5. Answer chunk includes enough context | 4 of 5 | 5/5 | 5/5 | 5/5 | MET |
 
 <!-- Underneath, paste the REAL output for each criterion from one of your
      runs — the actual text your system produced, not a description of it.
      Name the file and function that produced it. -->
+
+When is the library open until during term?
+  run 1: —  (best distance 0.459)
+  run 2: —  (best distance 0.459)
+  run 3: —  (best distance 0.459)
+
+How far in advance should you book your adviser before registration?
+  run 1: —  (best distance 0.332)
+  run 2: —  (best distance 0.332)
+  run 3: —  (best distance 0.332)
+
+What is the workload for CS 340 early in the course?
+  run 1: —  (best distance 0.261)
+  run 2: —  (best distance 0.261)
+  run 3: —  (best distance 0.261)
+
+Which part of Innisfree Hall is quieter?
+  run 1: —  (best distance 0.292)
+  run 2: —  (best distance 0.292)
+  run 3: —  (best distance 0.292)
+
+How many times can you change your meal plan tier?
+  run 1: —  (best distance 0.242)
+  run 2: —  (best distance 0.242)
+  run 3: —  (best distance 0.242)
+
+Out-of-scope questions (the gate should refuse these):
+  refused  (best distance 0.825)  What is the capital of Mongolia?
+  refused  (best distance 0.934)  How do I change the oil in a diesel engine?
+  refused  (best distance 0.886)  Who won the 1994 World Cup?
+  refused  (best distance 0.844)  What is the recommended dosage of ibuprofen for a headache?
+  refused  (best distance 0.896)  How do I write a for loop in Rust?
+  -> gate refused 5 of 5
 
 ## Verdicts
 
