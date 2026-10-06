@@ -280,7 +280,7 @@ Changed the top k from 5 to three
 
 
 **Why I picked it:**
-Baseline already passed, but retrieval included extra loosely related chunks; you wanted to test whether fewer chunks could preserve answers with less irrelevant context.
+No baseline criteria were missed, so there was no failed pipeline stage to diagnose. However, retrieval returned several loosely related chunks even when the correct chunk was present, so I chose retrieval efficiency as the area to improve.
 <!-- Connect it to a specific diagnosis above in one sentence. If you can't,
      you picked a fix because it sounded impressive. -->
 
@@ -291,11 +291,11 @@ Baseline already passed, but retrieval included extra loosely related chunks; yo
 
 | Criterion | Target | Run 1 | Run 2 | Run 3 | Verdict |
 |---|---|---|---|---|---|
-| 1. Retrieved chunk contains the answer | 4 of 5 |  |  |  |  |
-| 2. Every answer names a source | 5 of 5 |  |  |  |  |
-| 3. Gate stops out-of-corpus questions | 4 of 5 |  |  |  |  |
-| 4. | | | | | |
-| 5. | | | | | |
+| 1. Retrieved chunks include the answer | 4 of 5 | 5/5 | 5/5 | 5/5 | MET |
+| 2. Every answer names a source | 5 of 5 | 5/5 | 5/5 | 5/5 | MET |
+| 3. Gate stops out-of-corpus questions | 4 of 5 | 5/5 | 5/5 | 5/5 | MET |
+| 4. Sampled chunks focus on one clear topic | 4 of 5 | 5/5 | 5/5 | 5/5 | MET |
+| 5. Answer chunk includes enough context | 4 of 5 | 5/5 | 5/5 | 5/5 | MET |
 
 **Did it help?**
 
@@ -305,7 +305,7 @@ Baseline already passed, but retrieval included extra loosely related chunks; yo
      tell.
 
      Milestone 4. -->
-All five criteria still passed, while model input dropped from 8,631 to 5,988 tokens (~31%).
+All five criteria still passed, while model input dropped from 8,631 to 5,988 tokens (~31%) with answer quality and all five criteria remaining unchanged.
 ## What's Still Broken
 
 <!-- For each criterion still missed after your fix: what you'd do about it,
@@ -315,10 +315,12 @@ All five criteria still passed, while model input dropped from 8,631 to 5,988 to
      not.
 
      Milestone 5. -->
-nothing chanaged
+No acceptance criteria remained missed after the change. However, this test only used five questions, so I cannot conclude that top-k 3 would preserve retrieval quality for every possible query. I stopped after one measured change because the unit requires one improvement at a time.
+
 ## What I'd Do Differently
 
 <!-- Knowing what you know now — which of your five criteria would you write
      differently, and why?
 
      Milestone 5. -->
+Next time make criterion 1 5/5 questions with the answer in the top 3 retrieved chunks, because the current 4/5-in-top-5 criterion was too forgiving.
