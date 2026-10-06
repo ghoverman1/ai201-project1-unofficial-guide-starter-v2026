@@ -245,13 +245,13 @@ Out-of-scope questions (the gate should refuse these):
 
      Milestone 2. -->
 
-| # | Criterion | Verdict | How I decided |
-|---|---|---|---|
-| 1 |  |  |  |
-| 2 |  |  |  |
-| 3 |  |  |  |
-| 4 |  |  |  |
-| 5 |  |  |  |
+| Criterion | Target | Run 1 | Run 2 | Run 3 | Verdict |
+|---|---|---|---|---|---|
+| 1. Retrieved chunks include the answer | 4 of 5 | 5/5 | 5/5 | 5/5 | MET |
+| 2. Every answer names a source | 5 of 5 | 5/5 | 5/5 | 5/5 | MET |
+| 3. Gate stops out-of-corpus questions | 4 of 5 | 5/5 | 5/5 | 5/5 | MET |
+| 4. Sampled chunks focus on one clear topic | 4 of 5 | 5/5 | 5/5 | 5/5 | MET |
+| 5. Answer chunk includes enough context | 4 of 5 | 5/5 | 5/5 | 5/5 | MET |
 
 ## Diagnoses
 
@@ -272,13 +272,15 @@ Out-of-scope questions (the gate should refuse these):
      low, and which one you'd tighten and to what.
 
      Milestone 3. -->
-
+There was nothing missing/wrong but the effcicency seems stale.
 ## The Improvement
 
 **What I changed:**
+Changed the top k from 5 to three 
+
 
 **Why I picked it:**
-
+Baseline already passed, but retrieval included extra loosely related chunks; you wanted to test whether fewer chunks could preserve answers with less irrelevant context.
 <!-- Connect it to a specific diagnosis above in one sentence. If you can't,
      you picked a fix because it sounded impressive. -->
 
@@ -303,7 +305,7 @@ Out-of-scope questions (the gate should refuse these):
      tell.
 
      Milestone 4. -->
-
+All five criteria still passed, while model input dropped from 8,631 to 5,988 tokens (~31%).
 ## What's Still Broken
 
 <!-- For each criterion still missed after your fix: what you'd do about it,
@@ -313,7 +315,7 @@ Out-of-scope questions (the gate should refuse these):
      not.
 
      Milestone 5. -->
-
+nothing chanaged
 ## What I'd Do Differently
 
 <!-- Knowing what you know now — which of your five criteria would you write
